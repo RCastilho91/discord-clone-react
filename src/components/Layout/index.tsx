@@ -3,8 +3,9 @@ import { Grid } from './styles';
 import ServerList from '../ServerList';
 
 const Layout: React.FC = () => {
-    return <Grid>
-        </Grid>
+    return(<Grid>
+        <ServerList />
+        </Grid>)
 };
 
 export default Layout;

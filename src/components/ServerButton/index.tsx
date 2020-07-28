@@ -8,9 +8,22 @@ export interface Props {
     mentions?: number;
 }
 
-
-const ServerButton: React.FC = () => {
-
+const ServerButton: React.FC<Props> = ({
+    selected,
+    isHome,
+    hasNotifications,
+    mentions
+}) => {
+    return(
+        <Button
+            isHome={ isHome }
+            hasNotifications={ hasNotifications }
+            mentions={ mentions }
+            className={ selected ? 'active' : '' }
+        >
+            
+        </Button>
+    )
 };
 
 export default ServerButton
