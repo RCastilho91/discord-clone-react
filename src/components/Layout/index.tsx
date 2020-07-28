@@ -1,10 +1,10 @@
 import React from 'react';
 import { Grid } from './styles';
+import ServerList from '../ServerList';
 
 const Layout: React.FC = () => {
-    return (
-        <div>Hello world!</div>
-    )
+    return <Grid>
+        </Grid>
 };
 
 export default Layout;
