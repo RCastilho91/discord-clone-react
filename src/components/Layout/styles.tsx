@@ -8,7 +8,6 @@ import styled from 'styled-components';
 // UL - User List
 // UI - User Info
 
-
 export const Grid = styled.div`
     display: grid;
     

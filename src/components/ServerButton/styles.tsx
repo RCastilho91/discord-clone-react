@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Props } from '.';
+import { Props } from './index';
 
 export const Button = styled.button<Props>`
     display: flex;
@@ -10,16 +10,17 @@ export const Button = styled.button<Props>`
     height: 48px;
     border-radius: 50%;
     margin-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: border-radius: .2s, background-color: .2s;
+
     background-color: ${(props) => 
         props.isHome ? 'var(--rocketseat)' : 'var(--primary)'
     }
 
-    cursor: pointer;
-    position: relative;
-
     &::before {
         width: 9px;
-        height: 9px;]
+        height: 9px;
         position: absolute;
         left: -17px;
         top: calc(50% - 4.5px);
@@ -38,7 +39,7 @@ export const Button = styled.button<Props>`
         bottom: -4px;
         right: -4px;
         border-radius: 12px;
-        border: 4px solid var(--quarternary);
+        border: 4px solid var(--quaternary);
         text-align: right;
         font-size: 13px;
         font-weight: bold;
@@ -48,11 +49,9 @@ export const Button = styled.button<Props>`
             props.mentions && props.mentions > 0 ? 'inline' : 'none' }';
     }
 
-    transition: border-radius: .2s, background-color: .2s;
-
     &.active,
     &.hover {
         border-radius: 16px;
         background: ${props => props.isHome ? 'var(--rocketseat)' : 'var(--primary)'}
     }
-`;
+`

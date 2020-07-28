@@ -6,9 +6,6 @@ function App() {
   return (
     <div className="App">
       <Layout />
-      <h1>Sup World</h1>
-
-
       <GlobalStyles />
     </div>
   );
